@@ -1,2 +1,4 @@
 # python-terminal-snake-Pynput-
 An ASCII terminal based snake game. Programmed in Python.
+
+This code uses ANSI escape codes to reposition the cursor and efficiently change the game state only as needed. As well as sys.stdout.write(s) with flushing instead of the standard python print(). This makes the game extremely fast. In the repository there are four files. One that uses the Pynput library to register key inputs and is cross-platform as long as you have the Pynput dependency. One that uses sys.stdin.read() combined with select.select() in order to be compatible with Linux or Darwin. And one that uses "msvcrt" from the Microsoft C stanard library to be compatible with Windows. The fourth file is an optional init file that will run the appropriate file depending on your operating system.
